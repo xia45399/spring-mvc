@@ -8,6 +8,18 @@
        http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <mvc:annotation-driven/>
+    <mvc:annotation-driven>
+
+        <!--解决中文返回数据乱码-->
+        <!--别的作用待确定-->
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="defaultCharset" value="utf-8"/>
+                <property name="supportedMediaTypes" value="text/html;charset=UTF-8"/>
+                <property name="writeAcceptCharset" value="true"/>
+            </bean>
+        </mvc:message-converters>
+
+    </mvc:annotation-driven>
     <content:component-scan base-package="com.summer.api"/>
 </beans>
