@@ -14,4 +14,8 @@ public class BookService {
     public BookBean getById(long id) {
         return bookDao.queryById(id);
     }
+
+    public int insert(BookBean bookBean) {
+        return bookDao.insertBook(bookBean);
+    }
 }

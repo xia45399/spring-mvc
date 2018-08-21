@@ -5,27 +5,17 @@ package com.summer.bean;
  */
 public class BookBean {
     // 图书ID
-    private long id;
+    private Long id;
     // 图书名称
     private String name;
     // 馆藏数量
-    private int number;
+    private Integer number;
 
-
-    public BookBean(long id, String name, int number) {
-        this.id = id;
-        this.name = name;
-        this.number = number;
-    }
-
-    public BookBean() {
-    }
-
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -37,11 +27,11 @@ public class BookBean {
         this.name = name;
     }
 
-    public int getNumber() {
+    public Integer getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(Integer number) {
         this.number = number;
     }
 
