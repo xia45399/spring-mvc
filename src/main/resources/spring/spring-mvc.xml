@@ -22,4 +22,7 @@
 
     </mvc:annotation-driven>
     <content:component-scan base-package="com.summer.api"/>
+    <content:component-scan base-package="com.summer.service"/>
+    <content:component-scan base-package="com.summer.dao"/>
+
 </beans>
