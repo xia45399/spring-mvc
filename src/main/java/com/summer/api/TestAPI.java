@@ -1,5 +1,9 @@
 package com.summer.api;
 
+import com.summer.ResultBean;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,4 +29,13 @@ public class TestAPI {
         map.put("a", "类型");
         return map;
     }
+
+    @RequestMapping("test4")
+    public Object test4(){
+        ResultBean bean = new ResultBean();
+        bean.setName("123");
+        return bean;
+    }
+
+
 }
