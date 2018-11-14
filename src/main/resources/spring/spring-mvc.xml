@@ -18,6 +18,32 @@
                 <property name="supportedMediaTypes" value="text/html;charset=UTF-8"/>
                 <property name="writeAcceptCharset" value="true"/>
             </bean>
+
+            <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>application/json</value>
+                        <value>text/html;charset=UTF-8</value>
+                    </list>
+                </property>
+                <property name="defaultCharset">
+                    <value>utf-8</value>
+                </property>
+                <property name="fastJsonConfig">
+                    <bean class="com.alibaba.fastjson.support.config.FastJsonConfig">
+                        <property name="serializerFeatures">
+                            <list>
+                                <value>WriteMapNullValue</value>
+                                <value>QuoteFieldNames</value>
+                                <value>WriteDateUseDateFormat</value>
+                                <value>WriteEnumUsingToString</value>
+                            </list>
+                        </property>
+                    </bean>
+
+                </property>
+            </bean>
+
         </mvc:message-converters>
 
     </mvc:annotation-driven>
